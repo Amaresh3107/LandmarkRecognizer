@@ -1,4 +1,4 @@
-package com.cg.thirdeye.ui.theme
+package com.cg.thirdeye.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build
