@@ -1,11 +1,12 @@
 package com.cgproject.emotionapp.di
 
 import android.content.Context
-import com.cgproject.emotionapp.data.repository.EmotionRepositoryImpl
-import com.cgproject.emotionapp.domain.repository.EmotionRepository
+import com.cgproject.emotionapp.data.repository.TfLiteEmotionClassifier
+import com.cgproject.emotionapp.domain.repository.EmotionClassifier
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
@@ -15,7 +16,9 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideEmotionRepository(context: Context): EmotionRepository {
-        return EmotionRepositoryImpl(context)
+    fun provideEmotionRepository(
+        @ApplicationContext context: Context
+    ): EmotionClassifier {
+        return TfLiteEmotionClassifier(context)
     }
 }
