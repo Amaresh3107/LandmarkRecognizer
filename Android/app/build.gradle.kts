@@ -85,4 +85,6 @@ dependencies {
     implementation(libs.androidx.camera.view)
     // If you want to additionally use the CameraX Extensions library
     implementation(libs.androidx.camera.extensions)
+    // M3 Extended Icon
+    implementation(libs.androidx.material.icons.extended)
 }
