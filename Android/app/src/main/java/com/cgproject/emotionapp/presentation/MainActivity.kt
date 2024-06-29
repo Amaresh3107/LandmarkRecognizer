@@ -30,9 +30,7 @@ import com.cgproject.emotionapp.domain.model.Classification
 import com.cgproject.emotionapp.presentation.emotion_screen.CameraPreview
 import com.cgproject.emotionapp.presentation.emotion_screen.EmotionImageAnalyzer
 import com.cgproject.emotionapp.presentation.ui.theme.EmotionAppTheme
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -21,7 +21,6 @@ class TfLiteEmotionClassifier(
 ) : EmotionClassifier {
 
     private var classifier: ImageClassifier? = null
-    private val TAG = "TfLiteEmotionClassifier"
 
     private fun setupClassifier() {
         val baseOptions = BaseOptions.builder()

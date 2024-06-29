@@ -1,8 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    id ("kotlin-kapt")
-    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -77,11 +75,6 @@ dependencies {
     implementation (libs.tensorflow.lite.gpu)
     implementation (libs.tensorflow.lite.support)
     implementation(libs.tensorflow.lite.task.vision)
-    // Dagger-Hilt
-    kapt (libs.androidx.hilt.compiler)
-    implementation (libs.androidx.hilt.navigation.compose)
-    implementation(libs.hilt.android)
-    kapt(libs.hilt.android.compiler)
     // CameraX core library using the camera2 implementation
     // The following line is optional, as the core library is included indirectly by camera-camera2
     implementation(libs.androidx.camera.core)
