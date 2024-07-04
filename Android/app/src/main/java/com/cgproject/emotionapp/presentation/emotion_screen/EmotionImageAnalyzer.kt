@@ -16,7 +16,7 @@ class EmotionImageAnalyzer(
         if (frameSkipCounter % 60 == 0) {
             val rotationDegrees = image.imageInfo.rotationDegrees
             val bitmap = image.toBitmap().centerCrop(224, 224)
-            val results = classifier.recognizeEmotion(bitmap, rotationDegrees)
+            val results = classifier.recognizeLandmark(bitmap, rotationDegrees)
             onResults(results)
         }
         frameSkipCounter++

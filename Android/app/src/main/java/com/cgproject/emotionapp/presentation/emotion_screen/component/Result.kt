@@ -29,7 +29,7 @@ fun ResultText(
                 withStyle(style = SpanStyle(fontWeight = androidx.compose.ui.text.font.FontWeight.Bold)) {
                     append("Name: ")
                 }
-                append(classification.emotionName)
+                append(classification.landmarkName)
                 append("\n")
                 withStyle(style = SpanStyle(fontWeight = androidx.compose.ui.text.font.FontWeight.Bold)) {
                     append("Confidence: ")

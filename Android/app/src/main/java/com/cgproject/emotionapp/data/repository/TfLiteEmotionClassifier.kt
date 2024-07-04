@@ -2,17 +2,14 @@ package com.cgproject.emotionapp.data.repository
 
 import android.content.Context
 import android.graphics.Bitmap
-import android.util.Log
 import android.view.Surface
 import com.cgproject.emotionapp.domain.model.Classification
 import com.cgproject.emotionapp.domain.repository.EmotionClassifier
-import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.image.ImageProcessor
 import org.tensorflow.lite.support.image.TensorImage
 import org.tensorflow.lite.task.core.BaseOptions
 import org.tensorflow.lite.task.core.vision.ImageProcessingOptions
 import org.tensorflow.lite.task.vision.classifier.ImageClassifier
-import org.tensorflow.lite.support.common.ops.NormalizeOp
 
 class TfLiteEmotionClassifier(
     private val context: Context,
@@ -43,7 +40,10 @@ class TfLiteEmotionClassifier(
         }
     }
 
-    override fun recognizeEmotion(bitmap: Bitmap, rotationDegrees: Int): List<Classification> {
+    override fun recognizeLandmark(
+        bitmap: Bitmap,
+        rotationDegrees: Int
+    ): List<Classification> {
         if(classifier == null) {
             setupClassifier()
         }
@@ -60,11 +60,11 @@ class TfLiteEmotionClassifier(
         return results?.flatMap { classifications ->
             classifications.categories.map { category ->
                 Classification(
-                    emotionName = category.displayName,
+                    landmarkName = category.displayName,
                     score = category.score
                 )
             }
-        }?.distinctBy { it.emotionName } ?: emptyList()
+        }?.distinctBy { it.landmarkName } ?: emptyList()
     }
 
     private fun getOrientationFromRotation(rotation: Int): ImageProcessingOptions.Orientation {
