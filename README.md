@@ -47,6 +47,6 @@ To set up this project locally, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/LandmarkRecognizer.git
+   git clone https://github.com/Amaresh3107/LandmarkRecognizer.git
    cd LandmarkRecognizer
 ```
