@@ -1,6 +1,6 @@
-# CG Project
+# LandmarkRecognizer
 
-Welcome to the CG Project repository! This project integrates the concepts of computer graphics into an Android app built using Kotlin, Jetpack Compose, and a clean architecture approach.
+Welcome to the LandmarkRecognizer Project repository! This project integrates the concepts of computer graphics into an Android app built using Kotlin, Jetpack Compose, and a clean architecture approach.
 
 ## Table of Contents
 
@@ -47,5 +47,6 @@ To set up this project locally, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/cg-project.git
-   cd cg-project
+   git clone https://github.com/yourusername/LandmarkRecognizer.git
+   cd LandmarkRecognizer
+```
